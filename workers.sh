@@ -66,12 +66,5 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 sudo systemctl enable docker
 
-sudo tee /etc/hosts <<EOF
-192.168.1.30 master
-192.168.1.23 worker1
-192.168.1.42 worker2
-192.168.1.32 worker3
-EOF
 
-
-sudo kubeadm join 192.168.1.30:6443 --token 1zhr6n.c874mikayysfdxkn --discovery-token-ca-cert-hash sha256:23f937ef3ec6dd553fe34eaaaeaf4768189223196be08b6077b344aece70bac5
+sudo kubeadm join 10.0.2.15:6443 
